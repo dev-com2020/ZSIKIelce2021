@@ -30,13 +30,13 @@ Poniżej kod odpowiedzialny za wygląd okna
 
 root = Tk()
 root.title("Moja pierwsza gierka")
-root.geometry("300x150")
+root.geometry("500x250")
 
 text_label = Label(root, font=40, text="Zagrajmy w grę!")
 text_label.pack()
 
-Button(root, text="📝 papier", font=40, width=10).pack()
-Button(root, text="🛑 kamień", font=40, width=10).pack()
-Button(root, text="✂️ nożyce", font=40, width=10).pack()
+Button(root, text="📝 papier", font=40, width=10, command=lambda: play_cmd("paper")).pack()
+Button(root, text="🛑 kamień", font=40, width=10, command=lambda: play_cmd("rock")).pack()
+Button(root, text="✂️ nożyce", font=40, width=10, command=lambda: play_cmd("scissors")).pack()
 
 root.mainloop()
