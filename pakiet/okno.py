@@ -1,8 +1,13 @@
 from tkinter import Tk, Label, Button
 
 
-def click():
-    print("działa!")
+def click(button):
+    button.config(text=f"Działa!")
+
+# def create_command(func,*args,**kwargs):
+#     def command():
+#         return func(*args,**kwargs)
+#     return command
 
 
 #################
@@ -17,6 +22,6 @@ button.pack()
 label = Label(root, text="kite.com/python/docs/tkinter", font=135, fg="blue")
 label.pack()
 
-button.config(command=click)
+button.config(command=lambda: click(button))
 
 root.mainloop()
